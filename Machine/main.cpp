@@ -34,12 +34,12 @@ int main()
     ControlCenter* ControlCenter1 = new ControlCenter("ControlCenter" ,1, RadioReceiver(2,2));
     
     //add UIModifier1
-    UIModifier* UIModifier1 = new UIModifier("UIModifier",4,1,"UInterger");
+    UIModifier* UIModifier1 = new UIModifier("UIModifier1",4,1,"UInterger");
     
     UIModifier1->addReceiver(1,"UIWriter",RadioReceiver(2,2));
     
     //add UIntergerBlock1
-    UIntergerBlock* UIntergerBlock1 = new UIntergerBlock("UIntergerBlock",0);
+    UIntergerBlock* UIntergerBlock1 = new UIntergerBlock("UIntergerBlock1",0);
     
     UIntergerBlock1->addReceiver(1, "MinusOne", RadioReceiver(2,1));
     UIntergerBlock1->addEmitter(2, "IsNotZero", RadioEmitter(2,1,0));
