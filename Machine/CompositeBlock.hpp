@@ -26,6 +26,7 @@ class CompositeBlock : public Block
     
     void PrintMap(unsigned int indentation = 0);
     
+    bool checkCoordinate(Coordinate newCoordinate);
     void addControlCenter(const Coordinate& newCoordinate, ControlCenter* newControlCenter);
     void addBlock(unsigned int newPriority, const Coordinate& newCoordinate, Block* newBlock);
     

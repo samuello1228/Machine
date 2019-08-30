@@ -8,7 +8,6 @@
 
 #include "Detector.hpp"
 
-
 void Detector::Print()
 {
     emitter.Print();

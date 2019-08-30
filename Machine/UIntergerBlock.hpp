@@ -11,7 +11,6 @@
 
 #include "FundamentalBlock.hpp"
 
-
 class UIntergerBlock : public FundamentalBlock
 {
     public:
@@ -21,7 +20,5 @@ class UIntergerBlock : public FundamentalBlock
         properties_UI["UInterger"] = newNumber;
     }
 };
-
-
 
 #endif /* UIntergerBlock_hpp */

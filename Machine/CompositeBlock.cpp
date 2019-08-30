@@ -66,18 +66,47 @@ void CompositeBlock::PrintMap(unsigned int indentation)
     }
 }
 
+bool CompositeBlock::checkCoordinate(Coordinate newCoordinate)
+{
+    if(newCoordinate.x == 0) return false;
+    if(newCoordinate.x > size) return false;
+    if(newCoordinate.y == 0) return false;
+    if(newCoordinate.y > size) return false;
+    return true;
+}
+
 void CompositeBlock::addControlCenter(const Coordinate& newCoordinate, ControlCenter* newControlCenter)
 {
     tier = newControlCenter->properties_UI["tier"] + 1;
     newControlCenter->MotherBlock = this;
-    newControlCenter->coordinate = newCoordinate;
+    
+    if(checkCoordinate(newCoordinate))
+    {
+        newControlCenter->coordinate = newCoordinate;
+    }
+    else
+    {
+        cout<<"Error: The coordinate is out of range."<<endl;
+        return;
+    }
+    
     this->Composition.insert(newControlCenter);
 }
 
 void CompositeBlock::addBlock(unsigned int newPriority, const Coordinate& newCoordinate, Block* newBlock)
 {
     newBlock->MotherBlock = this;
-    newBlock->coordinate = newCoordinate;
+    
+    if(checkCoordinate(newCoordinate))
+    {
+        newBlock->coordinate = newCoordinate;
+    }
+    else
+    {
+        cout<<"Error: The coordinate is out of range."<<endl;
+        return;
+    }
+    
     FundamentalBlock* FundamentalBlock1 = dynamic_cast<FundamentalBlock*>(newBlock);
     if(FundamentalBlock1)
     {
@@ -91,7 +120,6 @@ void CompositeBlock::addBlock(unsigned int newPriority, const Coordinate& newCoo
     }
     
     this->Composition.insert(newBlock);
-
 }
 
 void CompositeBlock::registerAll()
@@ -208,5 +236,3 @@ void CompositeBlock::execute(CompositeBlock* topmost, bool isPrint)
         }
     }
 }
-
-

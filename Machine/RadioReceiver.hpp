@@ -18,4 +18,5 @@ public:
     void Print();
     RadioReceiver(unsigned int newTier, unsigned int newChannel);
 };
+
 #endif /* RadioReceiver_hpp */

@@ -24,7 +24,6 @@ using namespace std;
 #include "MinusOne.hpp"
 #include "UIWriter.hpp"
 
-
 int main()
 {
     //size hierarchy
@@ -48,6 +47,7 @@ int main()
     
     //add block
     CompositeBlock* topmost = new CompositeBlock("Topmost",sizeHierarchy.back());
+    sizeHierarchy.pop_back();
     topmost->addControlCenter(Coordinate(2,2), ControlCenter1);
     topmost->addBlock(1, Coordinate(4,1), UIModifier1);
     topmost->addBlock(2, Coordinate(4,2), UIntergerBlock1);
