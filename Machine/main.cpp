@@ -31,19 +31,19 @@ int main()
     sizeHierarchy.push_back(5);
     
     //add ControlCenter
-    ControlCenter* ControlCenter1 = new ControlCenter("ControlCenter" ,1, RadioReceiver(2,1));
+    ControlCenter* ControlCenter1 = new ControlCenter("ControlCenter" ,1, RadioReceiver(2,2));
     
     //add UIModifier1
     UIModifier* UIModifier1 = new UIModifier("UIModifier",4,1,"UInterger");
     
-    UIModifier1->addReceiver(1,"UIWriter",RadioReceiver(2,1));
+    UIModifier1->addReceiver(1,"UIWriter",RadioReceiver(2,2));
     
     //add UIntergerBlock1
     UIntergerBlock* UIntergerBlock1 = new UIntergerBlock("UIntergerBlock",0);
     
-    UIntergerBlock1->addReceiver(1, "MinusOne", RadioReceiver(1,1));
-    UIntergerBlock1->addEmitter(2, "IsNotZero", RadioEmitter(1,1,0));
-    UIntergerBlock1->addEmitter(3, "IsZero", RadioEmitter(2,1,1));
+    UIntergerBlock1->addReceiver(1, "MinusOne", RadioReceiver(2,1));
+    UIntergerBlock1->addEmitter(2, "IsNotZero", RadioEmitter(2,1,0));
+    UIntergerBlock1->addEmitter(3, "IsZero", RadioEmitter(2,2,1));
     
     //add block
     CompositeBlock* topmost = new CompositeBlock("Topmost",sizeHierarchy.back());
