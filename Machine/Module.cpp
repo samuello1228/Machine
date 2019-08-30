@@ -41,6 +41,56 @@ ForwardBlockOutput Module::getForwardBlock(FundamentalBlock* host)
                 coordinate.push_back(Coordinate(x,y));
             }
         }
+        else if(direction == 2)
+        {
+            //East
+            if(x != MotherBlock->size)
+            {
+                x++;
+                coordinate.push_back(Coordinate(x,y));
+                break;
+            }
+            else
+            {
+                x = 1;
+                coordinate.push_back(Coordinate(x,y));
+            }
+        }
+        else if(direction == 3)
+        {
+            //South
+            if(y != 1)
+            {
+                y--;
+                coordinate.push_back(Coordinate(x,y));
+                break;
+            }
+            else
+            {
+                y = MotherBlock->size;
+                coordinate.push_back(Coordinate(x,y));
+            }
+        }
+        else if(direction == 4)
+        {
+            //West
+            if(x != 1)
+            {
+                x--;
+                coordinate.push_back(Coordinate(x,y));
+                break;
+            }
+            else
+            {
+                x = MotherBlock->size;
+                coordinate.push_back(Coordinate(x,y));
+            }
+        }
+        else
+        {
+            cout<<"Error: The direction is out of range."<<endl;
+            return output;
+        }
         
         SonBlock = MotherBlock;
         MotherBlock = SonBlock->MotherBlock;
