@@ -19,6 +19,7 @@
 #include "UIModifier.hpp"
 
 //List of Module
+#include "TrueEmitter.hpp"
 #include "IsNotZero.hpp"
 #include "IsZero.hpp"
 #include "MinusOne.hpp"
@@ -45,7 +46,17 @@ void FundamentalBlock::addPropertiesUI(const string& key, unsigned int value)
 
 void FundamentalBlock::addEmitter(unsigned int newPriority, string module_name, const RadioEmitter& newEmitter)
 {
-    if(module_name == "IsNotZero")
+    if(module_name == "TrueEmitter")
+    {
+        if(this->module.find(module_name) != module.end())
+        {
+            cout<<"Error: this fundamental block already has the module \""<<module_name<<"\"."<<endl;
+            return;
+        }
+        
+        this->module[module_name] = new TrueEmitter(newPriority,newEmitter,this);
+    }
+    else if(module_name == "IsNotZero")
     {
         if(this->module.find(module_name) != module.end())
         {

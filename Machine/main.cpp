@@ -19,11 +19,6 @@ using namespace std;
 #include "UIntergerBlock.hpp"
 #include "UIModifier.hpp"
 
-//Module
-#include "IsNotZero.hpp"
-#include "MinusOne.hpp"
-#include "UIWriter.hpp"
-
 int main()
 {
     //size hierarchy

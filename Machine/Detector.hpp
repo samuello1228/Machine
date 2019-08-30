@@ -18,7 +18,7 @@ public:
     unsigned int channel;
     bool isEmitting;
     
-    RadioEmitter(unsigned int newTier, unsigned int newChannel, bool newIsEmitting) : tier(newTier), channel(newChannel), isEmitting(newIsEmitting) {}
+    RadioEmitter(unsigned int newTier, unsigned int newChannel, bool newIsEmitting = false) : tier(newTier), channel(newChannel), isEmitting(newIsEmitting) {}
 };
 
 class Detector : public Module
