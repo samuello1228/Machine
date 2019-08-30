@@ -7,7 +7,6 @@
 //
 
 #include "ControlCenter.hpp"
-#include "Channel.hpp"
 #include "EndReceiver.hpp"
 
 ControlCenter::ControlCenter(const string& newName, unsigned int newTier, const RadioReceiver& newReceiver) : FundamentalBlock(newName)

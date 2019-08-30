@@ -13,7 +13,6 @@
 using namespace std;
 
 #include "Coordinate.hpp"
-#include "Channel.hpp" //For all derived class of "Module"
 class FundamentalBlock;
 class CompositeBlock;
 

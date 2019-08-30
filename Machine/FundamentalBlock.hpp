@@ -15,7 +15,6 @@
 #include "Block.hpp"
 #include "Action.hpp"
 #include "Detector.hpp"
-#include "Channel.hpp"
 class Module;
 
 class FundamentalBlock : public Block

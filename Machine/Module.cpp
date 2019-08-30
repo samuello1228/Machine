@@ -6,7 +6,6 @@
 //  Copyright © 2019年 Samuel Lo. All rights reserved.
 //
 
-#include "Channel.hpp"
 #include "Module.hpp"
 #include "CompositeBlock.hpp"
 #include "FundamentalBlock.hpp"
