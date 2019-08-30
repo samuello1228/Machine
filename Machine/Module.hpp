@@ -13,8 +13,6 @@
 using namespace std;
 
 #include "Coordinate.hpp"
-#include "RadioEmitter.hpp" //For all derived class of "Module"
-#include "RadioReceiver.hpp" //For all derived class of "Module"
 #include "Channel.hpp" //For all derived class of "Module"
 class FundamentalBlock;
 class CompositeBlock;

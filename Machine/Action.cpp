@@ -12,7 +12,7 @@
 
 void Action::Print()
 {
-    receiver.Print();
+    cout<<"Receiver:(Tier:"<<receiver.tier<<", Channel:"<<receiver.channel<<")";
 }
 
 bool Action::getChannelSignal()

@@ -6,10 +6,12 @@
 //  Copyright © 2019年 Samuel Lo. All rights reserved.
 //
 
+#include <iostream>
+using namespace std;
+
 #include "Detector.hpp"
 
 void Detector::Print()
 {
-    emitter.Print();
+    cout<<"Emitter:(Tier:"<<emitter.tier<<", Channel:"<<emitter.channel<<", isEmitting:"<<emitter.isEmitting<<")";
 }
-

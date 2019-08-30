@@ -229,7 +229,7 @@ void FundamentalBlock::registerAll()
             else
             {
                 cout<<"Error: this emitter channel has already been registerd: ";
-                detector->emitter.Print();
+                detector->Print();
                 cout<<endl;
                 return;
             }

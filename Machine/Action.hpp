@@ -11,6 +11,15 @@
 
 #include "Module.hpp"
 
+class RadioReceiver
+{
+public:
+    unsigned int tier;
+    unsigned int channel;
+    
+    RadioReceiver(unsigned int newTier, unsigned int newChannel) : tier(newTier), channel(newChannel) {}
+};
+
 class Action : public Module
 {
 public:

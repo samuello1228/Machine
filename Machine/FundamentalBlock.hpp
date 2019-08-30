@@ -13,8 +13,8 @@
 #include <string>
 
 #include "Block.hpp"
-#include "RadioEmitter.hpp"
-#include "RadioReceiver.hpp"
+#include "Action.hpp"
+#include "Detector.hpp"
 #include "Channel.hpp"
 class Module;
 

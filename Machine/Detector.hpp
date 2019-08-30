@@ -11,6 +11,16 @@
 
 #include "Module.hpp"
 
+class RadioEmitter
+{
+public:
+    unsigned int tier;
+    unsigned int channel;
+    bool isEmitting;
+    
+    RadioEmitter(unsigned int newTier, unsigned int newChannel, bool newIsEmitting) : tier(newTier), channel(newChannel), isEmitting(newIsEmitting) {}
+};
+
 class Detector : public Module
 {
 public:
