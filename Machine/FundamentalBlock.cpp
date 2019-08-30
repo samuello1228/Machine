@@ -21,7 +21,6 @@
 //List of Module
 #include "TrueEmitter.hpp"
 #include "IsNotZero.hpp"
-#include "IsZero.hpp"
 #include "MinusOne.hpp"
 #include "UIWriter.hpp"
 
@@ -67,23 +66,6 @@ void FundamentalBlock::addEmitter(unsigned int newPriority, string module_name, 
         UIntergerBlock* UIntergerBlock1 = dynamic_cast<UIntergerBlock*>(this);
         
         if(UIntergerBlock1) this->module[module_name] = new IsNotZero(newPriority,newEmitter,UIntergerBlock1);
-        else
-        {
-            cout<<"Error: this fundamental block is not UIntergerBlock, cannot add module \""<<module_name<<"\"."<<endl;
-            return;
-        }
-    }
-    else if(module_name == "IsZero")
-    {
-        if(this->module.find(module_name) != module.end())
-        {
-            cout<<"Error: this fundamental block already has the module \""<<module_name<<"\"."<<endl;
-            return;
-        }
-        
-        UIntergerBlock* UIntergerBlock1 = dynamic_cast<UIntergerBlock*>(this);
-        
-        if(UIntergerBlock1) this->module[module_name] = new IsZero(newPriority,newEmitter,UIntergerBlock1);
         else
         {
             cout<<"Error: this fundamental block is not UIntergerBlock, cannot add module \""<<module_name<<"\"."<<endl;
