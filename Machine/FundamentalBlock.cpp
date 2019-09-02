@@ -125,9 +125,9 @@ void FundamentalBlock::addReceiver(unsigned int newPriority, string module_name,
 void FundamentalBlock::PrintMap(unsigned int indentation)
 {
     cout<<string(indentation, ' ');
-    cout<<"Tier:"<<tier<<", ";
-    cout<<"Type:"<<name<<", ";
-    cout<<"Coordinate:("<<coordinate.x<<","<<coordinate.y<<")";
+    cout<<"Priority:"<<properties_UI["priority"];
+    cout<<", Name:"<<name;
+    cout<<", Coordinate:("<<coordinate.x<<","<<coordinate.y<<")";
     //cout<<", Address:"<<this;
     cout<<endl;
     
@@ -135,31 +135,47 @@ void FundamentalBlock::PrintMap(unsigned int indentation)
     cout<<"Properties: "<<endl;
     for (map<string,unsigned int>::iterator it=properties_UI.begin(); it!=properties_UI.end(); it++)
     {
-        cout<<string(indentation+2, ' ');
-        cout<<it->first<< ": "<<it->second<<endl;
+        if(it->first != "priority")
+        {
+            cout<<string(indentation+2, ' ');
+            cout<<it->first<< ": "<<it->second<<endl;
+        }
     }
     
     PrintExtraProperties(indentation);
     
-    cout<<string(indentation, ' ');
-    cout<<"Radio data: "<<endl;
-    for (map<unsigned int,RadioEmitter*>::iterator it=radioData.begin(); it!=radioData.end(); it++)
+    if(radioData.size() != 0)
     {
-        cout<<string(indentation+2, ' ');
-        cout<<"Channel "<<it->first<< ": "<<it->second->isEmitting<<endl;
+        cout<<string(indentation, ' ');
+        cout<<"Radio data: "<<endl;
+        for (map<unsigned int,RadioEmitter*>::iterator it=radioData.begin(); it!=radioData.end(); it++)
+        {
+            cout<<string(indentation+2, ' ');
+            cout<<"Channel "<<it->first<< ": "<<it->second->isEmitting<<endl;
+        }
     }
     
+    //sort module
+    vector< map<string,Module*>::iterator > sortedModule;
+    for(map<string,Module*>::iterator it = module.begin(); it!=module.end(); it++)
+    {
+        sortedModule.push_back(it);
+    }
+    sort(sortedModule.begin(), sortedModule.end(), [](map<string,Module*>::iterator a, map<string,Module*>::iterator b)->bool{return a->second->priority < b->second->priority;});
+    
+    //print sorted module
     cout<<string(indentation, ' ');
     cout<<"Module: "<<endl;
-    for (map<string,Module*>::iterator it=module.begin(); it!=module.end(); it++)
+    for(unsigned int i = 0; i < sortedModule.size(); i++)
     {
         cout<<string(indentation+2, ' ');
-        cout<<"Type:"<<it->first<< ", Priority:"<<it->second->priority<<", ";
-        it->second->Print();
+        cout<<"Priority:"<<sortedModule[i]->second->priority<<", ";
+        cout<<"Name:"<<sortedModule[i]->first<<", ";
+        sortedModule[i]->second->Print();
         cout<<endl;
         
         //check host link
-        if(it->second->getHost() != this)
+        if(sortedModule[i]->second->getHost() != this)
         {
             cout<<"Error: The host link is wrong."<<endl;
             return;

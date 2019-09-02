@@ -6,6 +6,8 @@
 //  Copyright © 2019年 Samuel Lo. All rights reserved.
 //
 
+#include <iostream>
+
 #include "ControlCenter.hpp"
 #include "EndReceiver.hpp"
 
@@ -19,4 +21,22 @@ ControlCenter::ControlCenter(const string& newName, unsigned int newTier, const 
     properties_UI["tier"] = newTier;
     properties_UI["priority"] = 0;
     module["EndReceiver"] = new EndReceiver(1, newReceiver, this);
+}
+
+void ControlCenter::PrintMap(unsigned int indentation)
+{
+    cout<<string(indentation, ' ');
+    cout<<name<<": ";
+    cout<<"Tier: "<<properties_UI["tier"];
+    cout<<", Priority:"<<properties_UI["priority"];
+    cout<<", Coordinate:("<<coordinate.x<<","<<coordinate.y<<"), End";
+    module["EndReceiver"]->Print();
+    cout<<endl;
+    
+    //check host link
+    if(module["EndReceiver"]->getHost() != this)
+    {
+        cout<<"Error: The host link is wrong."<<endl;
+        return;
+    }
 }

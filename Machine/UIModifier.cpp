@@ -12,9 +12,6 @@
 
 void UIModifier::PrintExtraProperties(unsigned int indentation)
 {
-    cout<<string(indentation, ' ');
-    cout<<"Extra Properties: "<<endl;
-    
     cout<<string(indentation+2, ' ');
     cout<<"key: "<<key<<endl;
 }

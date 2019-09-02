@@ -15,6 +15,7 @@ class ControlCenter : public FundamentalBlock
 {
     public:
     ControlCenter(const string& newName, unsigned int newTier, const RadioReceiver& newReceiver);
+    void PrintMap(unsigned int indentation = 0);
 };
 
 #endif /* ControlCenter_hpp */

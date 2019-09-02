@@ -49,20 +49,25 @@ void CompositeBlock::PrintMap(unsigned int indentation)
         cout<<"This composite block does not have a control center."<<endl;
     }
     
-    cout<<string(indentation, ' ');
-    cout<<"Radio data: "<<endl;
-    for (map<unsigned int,RadioEmitter*>::iterator it=radioData.begin(); it!=radioData.end(); it++)
+    if(radioData.size() != 0)
     {
-        cout<<string(indentation+2, ' ');
-        cout<<"Channel "<<it->first<< ": "<<it->second->isEmitting<<endl;
+        cout<<string(indentation, ' ');
+        cout<<"Radio data: "<<endl;
+        for (map<unsigned int,RadioEmitter*>::iterator it=radioData.begin(); it!=radioData.end(); it++)
+        {
+            cout<<string(indentation+2, ' ');
+            cout<<"Channel "<<it->first<< ": "<<it->second->isEmitting<<endl;
+        }
     }
     
     cout<<string(indentation, ' ');
     cout<<"Composition:"<<endl;
+    vector<Block*> ControlCenters;
+    vector<Block*> NormalCenters;
     for(set<Block*>::iterator it = Composition.begin(); it!=Composition.end(); it++)
     {
-        (*it)->PrintMap(indentation+2);
-        cout<<endl;
+        if((*it)->isControlCenter()) ControlCenters.push_back((*it));
+        else NormalCenters.push_back((*it));
         
         //check MotherBlock link
         if((*it)->MotherBlock != this)
@@ -70,6 +75,21 @@ void CompositeBlock::PrintMap(unsigned int indentation)
             cout<<"Error: The MotherBlock link is wrong."<<endl;
             return;
         }
+    }
+    
+    //ControlCenters
+    for(unsigned int i = 0; i < ControlCenters.size(); i++)
+    {
+        ControlCenters[i]->PrintMap(indentation+2);
+        cout<<endl;
+    }
+    
+    //sort NormalCenters
+    sort(NormalCenters.begin(), NormalCenters.end(), [](Block* a, Block* b)->bool{return a->getPriority() < b->getPriority();});
+    for(unsigned int i = 0; i < NormalCenters.size(); i++)
+    {
+        NormalCenters[i]->PrintMap(indentation+2);
+        cout<<endl;
     }
 }
 
