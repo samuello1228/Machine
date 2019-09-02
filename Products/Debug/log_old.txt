@@ -1,10 +1,18 @@
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -65,12 +73,20 @@ Composition:
 Topmost: The number of loop: 1
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -130,12 +146,20 @@ Composition:
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -195,12 +219,20 @@ Composition:
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -260,12 +292,20 @@ Composition:
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -325,12 +365,20 @@ Composition:
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -391,12 +439,20 @@ Composition:
 Topmost: The number of loop: 2
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -456,12 +512,20 @@ Composition:
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -521,12 +585,20 @@ Composition:
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -586,12 +658,20 @@ Composition:
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -651,12 +731,20 @@ Composition:
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -717,12 +805,20 @@ Composition:
 Topmost: The number of loop: 3
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -782,12 +878,20 @@ Composition:
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -847,12 +951,20 @@ Composition:
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -912,12 +1024,20 @@ Composition:
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
@@ -977,12 +1097,20 @@ Composition:
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
+Tier:1, Type:ControlCenter, Coordinate:(2,2)
+Properties: 
+  priority: 0
+  tier: 1
+Radio data: 
+Module: 
+  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
   Tier:1, Type:ControlCenter, Coordinate:(2,2)
   Properties: 
+    priority: 0
     tier: 1
   Radio data: 
   Module: 
