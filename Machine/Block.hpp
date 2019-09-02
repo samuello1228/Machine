@@ -31,6 +31,7 @@ class Block
     virtual ~Block() {};
     
     virtual void PrintMap(unsigned int indentation) = 0;
+    virtual bool isControlCenter() = 0;
     virtual void registerAll() = 0;
     
     virtual unsigned int getPriority() = 0;

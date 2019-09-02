@@ -17,5 +17,6 @@ ControlCenter::ControlCenter(const string& newName, unsigned int newTier, const 
         return;
     }
     properties_UI["tier"] = newTier;
+    properties_UI["priority"] = 0;
     module["EndReceiver"] = new EndReceiver(1, newReceiver, this);
 }

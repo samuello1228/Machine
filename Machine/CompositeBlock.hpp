@@ -18,7 +18,7 @@ class CompositeBlock : public Block
 {
     public:
     unsigned int size;
-    ControlCenter* controlCenter;
+    ControlCenter* controlCenter; //only for executable block
     set<Block*> Composition;
     
     CompositeBlock(const string& newName, unsigned int newSize);
@@ -30,6 +30,7 @@ class CompositeBlock : public Block
     void addControlCenter(const Coordinate& newCoordinate, ControlCenter* newControlCenter);
     void addBlock(unsigned int newPriority, const Coordinate& newCoordinate, Block* newBlock);
     
+    bool isControlCenter(); //if is not a control center, it is not executable
     void registerAll();
     
     unsigned int getPriority();

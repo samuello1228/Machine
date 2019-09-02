@@ -181,6 +181,13 @@ Block* FundamentalBlock::getTierBlock(unsigned int tier)
     return block_tier;
 }
 
+bool FundamentalBlock::isControlCenter()
+{
+    ControlCenter* controlCenter = dynamic_cast<ControlCenter*>(this);
+    if(controlCenter) return true;
+    else return false;
+}
+
 void FundamentalBlock::registerAll()
 {
     //register control center
@@ -232,8 +239,10 @@ void FundamentalBlock::registerAll()
 
 unsigned int FundamentalBlock::getPriority()
 {
-    ControlCenter* controlCenter = dynamic_cast<ControlCenter*>(this);
-    if(controlCenter) return 0;
+    if(isControlCenter())
+    {
+        return 0;
+    }
     
     std::map<string,unsigned int>::iterator it = properties_UI.find("priority");
     if(it == properties_UI.end())

@@ -38,9 +38,16 @@ void CompositeBlock::PrintMap(unsigned int indentation)
     cout<<endl;
     
     //Check Control Center
-    ControlCenter* controlCenter2 = dynamic_cast<ControlCenter*>(controlCenter);
-    if(!controlCenter2) cout<<"Error: The ControlCenter link is not ControlCenter."<<endl;
-    if(tier != controlCenter->properties_UI["tier"] + 1) cout<<"Error: The ControlCenter link has wrong value of tier."<<endl;
+    if(controlCenter)
+    {
+        if(tier != controlCenter->properties_UI["tier"] + 1) cout<<"Error: The ControlCenter link has wrong value of tier."<<endl;
+        controlCenter->PrintMap();
+    }
+    else
+    {
+        cout<<string(indentation, ' ');
+        cout<<"This composite block does not have a control center."<<endl;
+    }
     
     cout<<string(indentation, ' ');
     cout<<"Radio data: "<<endl;
@@ -122,6 +129,16 @@ void CompositeBlock::addBlock(unsigned int newPriority, const Coordinate& newCoo
     this->Composition.insert(newBlock);
 }
 
+bool CompositeBlock::isControlCenter()
+{
+    for(set<Block*>::iterator it = Composition.begin(); it!=Composition.end(); it++)
+    {
+        if(! (*it)->isControlCenter() ) return false;
+    }
+    
+    return true;
+}
+
 void CompositeBlock::registerAll()
 {
     for(set<Block*>::iterator it = Composition.begin(); it!=Composition.end(); it++)
@@ -129,7 +146,7 @@ void CompositeBlock::registerAll()
         (*it)->registerAll();
     }
     
-    if(controlCenter == nullptr)
+    if(!isControlCenter() && controlCenter == nullptr)
     {
         cout<<"Error: Control center cannot be found."<<endl;
         return;
@@ -138,7 +155,11 @@ void CompositeBlock::registerAll()
 
 unsigned int CompositeBlock::getPriority()
 {
-    if(controlCenter == nullptr)
+    if(isControlCenter())
+    {
+        return 0;
+    }
+    else if(controlCenter == nullptr)
     {
         cout<<"Error: Control center cannot be found."<<endl;
         return 0;

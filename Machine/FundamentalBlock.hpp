@@ -36,6 +36,7 @@ class FundamentalBlock : public Block
     virtual void PrintExtraProperties(unsigned int indentation = 0);
     
     Block* getTierBlock(unsigned int tier);
+    bool isControlCenter();
     void registerAll();
     
     unsigned int getPriority();
