@@ -1,1170 +1,786 @@
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 0
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
 Topmost: The number of loop: 1
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Topmost: The number of loop: 2
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 2
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 1
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 1
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 1
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 1
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Topmost: The number of loop: 3
 Executing UIModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 1
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 1
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:1)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:1)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing UIntergerBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 0
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 0
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateModifier1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 0
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateModifier2
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 0
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 0
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:0)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:0)
 
 Executing NotGateBlock1
 Tier:2, Type:Topmost, Size:5, Coordinate:(0,0)
-Tier:1, Type:ControlCenter, Coordinate:(2,2)
-Properties: 
-  priority: 0
-  tier: 1
-Radio data: 
-Module: 
-  Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 Radio data: 
   Channel 1: 0
   Channel 2: 1
 Composition:
-  Tier:1, Type:ControlCenter, Coordinate:(2,2)
-  Properties: 
-    priority: 0
-    tier: 1
-  Radio data: 
-  Module: 
-    Type:EndReceiver, Priority:1, Receiver:(Tier:2, Channel:2)
+  ControlCenter: Tier: 1, Priority:0, Coordinate:(2,2), EndReceiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIModifier1, Coordinate:(4,1)
+  Priority:1, Name:UIModifier1, Coordinate:(4,1)
   Properties: 
     UInterger: 2
     direction: 1
-    priority: 1
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:2)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:2)
 
-  Tier:1, Type:UIntergerBlock1, Coordinate:(4,2)
+  Priority:2, Name:UIntergerBlock1, Coordinate:(4,2)
   Properties: 
     UInterger: 0
-    priority: 2
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:2, Emitter:(Tier:2, Channel:1, isEmitting:0)
-    Type:MinusOne, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:MinusOne, Receiver:(Tier:2, Channel:1)
+    Priority:2, Name:IsNotZero, Emitter:(Tier:2, Channel:1, isEmitting:0)
 
-  Tier:1, Type:NotGateModifier1, Coordinate:(4,3)
+  Priority:3, Name:NotGateModifier1, Coordinate:(4,3)
   Properties: 
     UInterger: 1
     direction: 1
-    priority: 3
-  Extra Properties: 
     key: UInterger
   Radio data: 
     Channel 1: 1
   Module: 
-    Type:TrueEmitter, Priority:1, Emitter:(Tier:1, Channel:1, isEmitting:1)
-    Type:UIWriter, Priority:2, Receiver:(Tier:1, Channel:1)
+    Priority:1, Name:TrueEmitter, Emitter:(Tier:1, Channel:1, isEmitting:1)
+    Priority:2, Name:UIWriter, Receiver:(Tier:1, Channel:1)
 
-  Tier:1, Type:NotGateModifier2, Coordinate:(5,4)
+  Priority:4, Name:NotGateModifier2, Coordinate:(5,4)
   Properties: 
     UInterger: 0
     direction: 4
-    priority: 4
-  Extra Properties: 
     key: UInterger
-  Radio data: 
   Module: 
-    Type:UIWriter, Priority:1, Receiver:(Tier:2, Channel:1)
+    Priority:1, Name:UIWriter, Receiver:(Tier:2, Channel:1)
 
-  Tier:1, Type:NotGateBlock1, Coordinate:(4,4)
+  Priority:5, Name:NotGateBlock1, Coordinate:(4,4)
   Properties: 
     UInterger: 1
-    priority: 5
-  Radio data: 
   Module: 
-    Type:IsNotZero, Priority:1, Emitter:(Tier:2, Channel:2, isEmitting:1)
+    Priority:1, Name:IsNotZero, Emitter:(Tier:2, Channel:2, isEmitting:1)
 
